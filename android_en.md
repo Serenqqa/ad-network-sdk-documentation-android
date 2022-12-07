@@ -13,7 +13,7 @@
 This SDK is used for work with advertisements of two types:
 
 - Video ads
-- Ads shown inside **web-view**.
+- Ads shown inside **web-view**
 
 Depending on the server decisions only one of the ad types will be shown.
 
@@ -21,7 +21,7 @@ There is a statistic class AdvSDK at the core of **SDK**, that:
 
 - initialize the library;
 - load an advertisement;
-- show an advertisement.
+- show an advertisement
 
 There are a few methods in this class that run in the background to manage the aforementioned processes. There are listener interfaces to respond to their execution. SDK users have to implement these interfaces on their own, depending on their needs.
 Listener callbacks return the result to the main flow.
@@ -108,7 +108,7 @@ class LoadActivity : AppCompatActivity() {
 
 Caching and refining of creatives is done automatically, without capability for user to manage this process.
 
-E.g, cache refreshing occurs when video ends, or after its expiration period. Expiration period is set by the advertiser. Therefore, cached videos may result in an error after an attempt to view them.
+E.g, cache refreshing occurs when video ends, or after its expiration period. Expiration period is set by the advertiser. Therefore, cached video may result in an error after an attempt to view them.
 
 ## Ad display <a name="manual_show"></a>
 
@@ -186,7 +186,7 @@ repositories {
 }
 ```
 
-for **Gradle 7** and following (new project structure) repository have to be added to **settings.gradle**
+for **Gradle 7** and following (new project structure) - a repository is to be added to **settings.gradle**
 
 ![Screenshot_3.png](/images/Screenshot_3.png)
 
@@ -224,7 +224,7 @@ AdvSDK.INSTANCE.initialize(
 
 # How to work with library (example) <a name="lib_work"></a> 
 
-Example of a code illustrates the fastest way of development how to show advertisement
+An example of the code illustrates the most reliable and fastest way for a developer to get an advertisement shown
 
 An **Activity** is created that implements all 3 listener interfaces: initiate, load, and show.
 
