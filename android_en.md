@@ -1,6 +1,6 @@
 [Manual](#manual) | [API](#api)
 
-# SDK Work way
+# SDK Workflow and Integration
 ## Contents
 - [Library initialization](#initialization)
 - [Advertisements upload](#manual_load)
@@ -15,21 +15,21 @@ This SDK is used for work with advertisements of two types:
 - Video ads
 - Ads shown inside **web-view**.
 
-Depending on the server decisions one of the ad types will be shown.
+Depending on the server decisions only one of the ad types will be shown.
 
-At the core of **SDK** work there is a statistic class **AdvSDK**, that:
+There is a statistic class AdvSDK at the core of **SDK**, that:
 
 - initialize the library;
 - load an advertisement;
 - show an advertisement.
 
-To manage these processes, there are some methods in the class that usually run in the background. To respond to their execution, there are listener interfaces. SDK users have to implement these interfaces on their own, depending on his needs.
+There are a few methods in this class that run in the background to manage the aforementioned processes. There are listener interfaces to respond to their execution. SDK users have to implement these interfaces on their own, depending on their needs.
 Listener callbacks return the result to the main flow.
 Listener interface [example](#lib_work).
 
 
 ## Library initialization <a name="initialization"></a>
-**SDK** is prepared for loading and showing of the advertisements.
+**SDK** is prepared for loading and showing advertisements.
 
 Example:
 
@@ -55,7 +55,7 @@ class InitActivity : AppCompatActivity() {
 
 ## Advertisements upload <a name="manual_load"></a>
 
-SDK is prepared for loading and showing of the advertisements. After a successful response is received, the advertisement is loaded into the cache.
+SDK is prepared for loading and showing advertisements. After a valid response is successfully received, the advertisement is loaded into the cache.
 
 
 #### Ad types
@@ -106,9 +106,9 @@ class LoadActivity : AppCompatActivity() {
 
 ## Nuances of the caching system <a name="cache"></a>
 
-Caching and refining of creatives is automatically, without capability for user managing this process.
+Caching and refining of creatives is done automatically, without capability for user to manage this process.
 
-E.g, cache refining occurs when video ends, or after its the expiration period. Expiration period is regulated by the advertiser. Therefore, cached video may result in an error after the view attempt.
+E.g, cache refreshing occurs when video ends, or after its expiration period. Expiration period is set by the advertiser. Therefore, cached videos may result in an error after an attempt to view them.
 
 ## Ad display <a name="manual_show"></a>
 
@@ -169,8 +169,8 @@ Library is distributed as an artifact for **maven** `com.greengray:advsdk`
 
 current library version `com.greengray:advsdk:1.3.1`
 
-For work with the library you need GAME_ID - an application identifier in the ad serving system.
-Contact [a.bobkov@mobidriven.com](a.bobkov@mobidriven.com) to recieve the identifier.
+You need GAME_ID - an application identifier in the ad serving system to work with the library.
+Contact [partners@mobidriven.com](partners@mobidriven.com) to receive the identifier.
 
 You have to add maven repository in build.gradle project level
 
@@ -202,7 +202,7 @@ dependencyResolutionManagement {
     }}
 ```
 
-2. add library `com.greengray:advsdk:1.3.1` to dependancy block **build.gradle** of modul level
+2. add library `com.greengray:advsdk:1.3.1` to dependancy block **build.gradle** of module level
 
 ```implementation 'com.greengray:advsdk:1.3.1'```
     
